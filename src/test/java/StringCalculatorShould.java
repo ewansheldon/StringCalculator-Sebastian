@@ -15,12 +15,21 @@ public class StringCalculatorShould {
     }
 
     @Test
-    void return_6_when_string_2_4() {
-        assertEquals(6, new StringCalculator().add("2,4"));
+    void return_2_when_string_2() {
+        assertEquals(2, new StringCalculator().add("2"));
     }
 
     @Test
-    void return_3_when_string_1_2() {
-        assertEquals(3, new StringCalculator().add("1,2"));
+    void return_3_when_string_3() {
+        assertEquals(3, new StringCalculator().add("3"));
     }
+    //    @Test
+//    void return_6_when_string_2_4() {
+//        assertEquals(6, new StringCalculator().add("2,4"));
+//    }
+//
+//    @Test
+//    void return_3_when_string_1_2() {
+//        assertEquals(3, new StringCalculator().add("1,2"));
+//    }
 }
