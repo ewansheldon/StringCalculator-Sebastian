@@ -22,4 +22,9 @@ public class StringCalculatorShould {
     public void return_value_of_string_when_one_character(String input, int sum) {
         assertEquals(sum, new StringCalculator().add(input));
     }
+
+    @Test
+    public void return_6_of_string_with_2_4() {
+        assertEquals(6, new StringCalculator().add("2,4"));
+    }
 }
