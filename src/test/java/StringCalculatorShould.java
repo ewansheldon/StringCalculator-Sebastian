@@ -32,4 +32,9 @@ public class StringCalculatorShould {
     public void return_7_of_string_with_3_4() {
         assertEquals(7, new StringCalculator().add("3,4"));
     }
+
+    @Test
+    public void return_8_of_string_4_4() {
+        assertEquals(8, new StringCalculator().add("4,4"));
+    }
 }
