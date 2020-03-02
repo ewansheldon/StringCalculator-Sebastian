@@ -18,4 +18,9 @@ public class StringCalculatorShould {
     void return_6_when_string_2_4() {
         assertEquals(6, new StringCalculator().add("2,4"));
     }
+
+    @Test
+    void return_3_when_string_1_2() {
+        assertEquals(3, new StringCalculator().add("1,2"));
+    }
 }
