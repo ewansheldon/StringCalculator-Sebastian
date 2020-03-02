@@ -1,35 +1,25 @@
 import com.codurance.string_calculator.StringCalculator;
-import org.junit.jupiter.api.Test;
+import junitparams.JUnitParamsRunner;
+import junitparams.Parameters;
+import org.junit.runner.RunWith;
+import org.junit.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@RunWith(JUnitParamsRunner.class)
 public class StringCalculatorShould {
     @Test
-    void return_0_when_empty_string() {
+    public void return_0_when_empty_string() {
         assertEquals(0, new StringCalculator().add(""));
     }
 
     @Test
-    void return_4_when_string_4() {
-        assertEquals(4, new StringCalculator().add("4"));
+    @Parameters({
+            "2,2",
+            "3,3",
+            "4,4"
+    })
+    public void return_value_of_string_when_one_character(String input, int sum) {
+        assertEquals(sum, new StringCalculator().add(input));
     }
-
-    @Test
-    void return_2_when_string_2() {
-        assertEquals(2, new StringCalculator().add("2"));
-    }
-
-    @Test
-    void return_3_when_string_3() {
-        assertEquals(3, new StringCalculator().add("3"));
-    }
-    //    @Test
-//    void return_6_when_string_2_4() {
-//        assertEquals(6, new StringCalculator().add("2,4"));
-//    }
-//
-//    @Test
-//    void return_3_when_string_1_2() {
-//        assertEquals(3, new StringCalculator().add("1,2"));
-//    }
 }
